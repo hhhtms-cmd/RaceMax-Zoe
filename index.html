@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- GR3-US BUILD v1 2026-11-23 -->
+<title>RACEMAX GR3 — Custom Karting Helmet | US Pre-Order</title>
+<style>
+  :root{--ink:#0b0b0c;--paper:#faf9f7;--muted:#8a8a86;--line:#e4e2dc;--accent:#b3001b}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Helvetica Neue",-apple-system,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 28px}
+  header{position:sticky;top:0;background:rgba(250,249,247,.92);backdrop-filter:blur(8px);z-index:10;border-bottom:1px solid var(--line)}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  .brand{font-size:15px;font-weight:600;letter-spacing:.34em}
+  .brand b{color:var(--accent);font-weight:600}
+  .langs{display:flex;gap:20px}
+  .langs button{background:none;border:none;font-size:12px;letter-spacing:.14em;color:var(--muted);cursor:pointer;padding:2px 0;border-bottom:1px solid transparent;font-family:inherit}
+  .langs button.active{color:var(--ink);border-bottom-color:var(--ink)}
+  .hero{padding:110px 0 90px;text-align:center}
+  .kicker{font-size:11px;letter-spacing:.42em;color:var(--muted);text-transform:uppercase;margin-bottom:30px}
+  h1{font-size:58px;font-weight:200;line-height:1.12;letter-spacing:-.01em}
+  h1 strong{font-weight:600}
+  .sub{max-width:600px;margin:28px auto 0;color:#55534f;font-size:17px;font-weight:300}
+  .certline{margin-top:38px;font-size:12px;letter-spacing:.3em;color:var(--ink)}
+  .certline span{margin:0 14px;color:var(--muted)}
+  .cta{display:inline-block;margin-top:44px;background:var(--ink);color:#fff;text-decoration:none;padding:16px 42px;font-size:13px;letter-spacing:.22em;border-radius:999px}
+  .cta:hover{background:var(--accent);transition:background .25s}
+  .note{margin-top:16px;font-size:12px;color:var(--muted);letter-spacing:.06em}
+  section{padding:84px 0;border-top:1px solid var(--line)}
+  .label{font-size:11px;letter-spacing:.42em;color:var(--muted);text-transform:uppercase;margin-bottom:18px}
+  h2{font-size:32px;font-weight:300;letter-spacing:-.01em;margin-bottom:14px}
+  h2 strong{font-weight:600}
+  .lead{color:#55534f;font-weight:300;max-width:620px;font-size:16px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:48px}
+  .cert .std{font-size:30px;font-weight:200}
+  .cert .std b{font-weight:600}
+  .cert h3{font-size:14px;font-weight:600;letter-spacing:.08em;margin:10px 0 8px}
+  .cert p{color:#55534f;font-weight:300;font-size:15px}
+  .cert a{color:var(--ink);font-size:12px;letter-spacing:.18em;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+  .cert .verify{margin-top:16px}
+  .steps{margin-top:20px}
+  .step{display:grid;grid-template-columns:70px 200px 1fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .step:first-child{border-top:1px solid var(--line)}
+  .step .n{font-size:13px;letter-spacing:.2em;color:var(--muted)}
+  .step h3{font-size:16px;font-weight:600}
+  .step p{color:#55534f;font-weight:300;font-size:15px}
+  .uom{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin:26px 0 6px}
+  .uom button{background:none;border:none;padding:8px 22px;font-size:12px;letter-spacing:.16em;cursor:pointer;color:var(--muted);font-family:inherit}
+  .uom button.active{background:var(--ink);color:#fff}
+  table{width:100%;border-collapse:collapse;margin-top:14px}
+  th,td{padding:14px 8px;text-align:left;font-size:15px;border-bottom:1px solid var(--line)}
+  th{font-size:11px;letter-spacing:.24em;color:var(--muted);font-weight:500;text-transform:uppercase}
+  td.s{font-weight:600;letter-spacing:.06em}
+  .prices{display:grid;grid-template-columns:repeat(3,1fr);margin-top:48px}
+  .price{padding:6px 34px;border-left:1px solid var(--line)}
+  .price:first-child{border-left:none;padding-left:0}
+  .price h3{font-size:12px;letter-spacing:.24em;font-weight:500;color:var(--muted);text-transform:uppercase}
+  .price .amount{font-size:40px;font-weight:200;margin:14px 0 10px}
+  .price p{color:#55534f;font-weight:300;font-size:14px}
+  form{margin-top:44px}
+  .frow{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-bottom:30px}
+  .frow.one{grid-template-columns:1fr}
+  label{font-size:11px;letter-spacing:.24em;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:8px}
+  input,select,textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);padding:10px 2px;font-size:16px;font-family:inherit;color:var(--ink);border-radius:0;outline:none}
+  input:focus,select:focus,textarea:focus{border-bottom-color:var(--ink)}
+  .submit{margin-top:8px;background:var(--ink);color:#fff;border:none;padding:16px 46px;font-size:13px;letter-spacing:.22em;border-radius:999px;cursor:pointer;font-family:inherit}
+  .submit:hover{background:var(--accent)}
+  .ok{display:none;margin-top:22px;font-size:15px;color:#2e5e2e;border-left:2px solid #2e5e2e;padding-left:14px}
+  details{border-bottom:1px solid var(--line);padding:20px 0}
+  details:first-of-type{border-top:1px solid var(--line);margin-top:36px}
+  summary{font-size:16px;font-weight:500;cursor:pointer;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  details p{color:#55534f;font-weight:300;margin-top:10px;font-size:15px;max-width:720px}
+  footer{border-top:1px solid var(--line);padding:44px 0 60px;text-align:center;color:var(--muted);font-size:12px;letter-spacing:.05em}
+  footer p{max-width:640px;margin:0 auto 8px}
+  @media(max-width:760px){
+    h1{font-size:38px}.hero{padding:70px 0 60px}section{padding:56px 0}
+    .cols{grid-template-columns:1fr;gap:36px}
+    .step{grid-template-columns:44px 1fr}.step p{grid-column:2}
+    .prices{grid-template-columns:1fr;gap:30px}.price{border-left:none;padding:0}
+    .frow{grid-template-columns:1fr}
+  }
+</style>
+<style>
+  /* Racing palette: silver grey + volt — brushed-metal engineering look */
+  :root{--ink:#101114;--paper:#e8e9e9;--muted:#6f7276;--line:#d2d4d1;--accent:#c6e617}
+  body{background:linear-gradient(180deg,#eeeFEf 0%,#e3e4e4 100%);color:#101114}
+  header{background:rgba(232,233,233,.92);border-bottom-color:#cfd1ce}
+  .brand b{color:#6f9400}
+  .langs button.active{color:#101114;border-bottom-color:#101114}
+  .sub,.lead,.cert p,.step p,.price p,details p{color:#42454a;font-weight:300}
+  .certline{color:#101114}
+  .certline span{color:#a9aca6}
+  .cta{background:#d9ff3d;color:#0a0b0c;font-weight:700;box-shadow:0 1px 0 rgba(16,17,20,.15)}
+  .cta:hover{background:#101114;color:#fff}
+  .cert a{color:#101114;border-bottom-color:#101114}
+  .step .n{color:#6f9400;font-weight:600}
+  .uom{border-color:#c6c8c3;background:rgba(255,255,255,.35)}
+  .uom button.active{background:#101114;color:#fff;font-weight:700}
+  th{color:#6f7276}
+  input,select,textarea{color:#101114;border-bottom-color:#c6c8c3}
+  input:focus,select:focus,textarea:focus{border-bottom-color:#101114}
+  select option{color:#0b0b0c;background:#fff}
+  .submit{background:#101114;color:#fff;font-weight:600}
+  .submit:hover{background:#d9ff3d;color:#0a0b0c}
+  .ok{color:#2e5e2e;border-left-color:#2e5e2e}
+  footer{border-top-color:#cfd1ce}
+  .certline{line-height:2.2}
+  @media(max-width:760px){.certline{font-size:11px;letter-spacing:.22em}.certline span{margin:0 8px}}
+  .gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:14px;margin-top:44px}
+  .gallery img{width:100%;height:100%;object-fit:contain;display:block;border:1px solid #d2d4d1;background:#e4e5e4;padding:10px}
+  .gallery .g-main{grid-row:span 1;aspect-ratio:4/3}
+  .gallery .g-side{aspect-ratio:4/3}
+  @media(max-width:760px){.gallery{grid-template-columns:1fr 1fr}.gallery .g-main{grid-column:span 2}}
+  .addbtn{margin-top:18px;background:transparent;border:1px solid #101114;color:#101114;padding:11px 26px;font-size:12px;letter-spacing:.2em;border-radius:999px;cursor:pointer;font-family:inherit}
+  .addbtn:hover{background:#d9ff3d;border-color:#d9ff3d;color:#0a0b0c}
+  .price select{margin-top:14px;max-width:170px}
+  #cart-box{border:1px solid #c6c8c3;background:rgba(255,255,255,.45);padding:26px 28px;margin-top:40px}
+  #cart-box h3{font-size:12px;letter-spacing:.26em;font-weight:600;margin-bottom:14px}
+  .citem{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:10px 0;border-bottom:1px solid #d8dad4;font-size:15px}
+  .citem .cx{color:#6f7276;font-size:13px}
+  .citem button{background:none;border:none;color:#8a2b20;cursor:pointer;font-size:13px;font-family:inherit}
+  .ctotal{display:flex;justify-content:space-between;padding-top:16px;font-size:17px;font-weight:600}
+  #cart-empty{color:#6f7276;font-weight:300;font-size:15px}
+  .wall{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+  .wall img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border:1px solid #d2d4d1;background:#111}
+  @media(max-width:760px){.wall{grid-template-columns:1fr 1fr}}
+  .cart-note{margin-top:12px;font-size:13px;color:#6f7276;font-weight:300}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">RACEMAX <b>GR3</b></div>
+    <div class="langs">
+      <button data-lang="en" class="active">EN</button>
+      <button data-lang="es">ES</button>
+      <button data-lang="zh">中文</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <div class="kicker" data-i="kicker">US Custom Helmet Program</div>
+  <h1 data-i="h1">One helmet. <strong>Your design.</strong><br>Dual certified.</h1>
+  <p class="sub" data-i="sub">The GR3 is a full-face competition helmet, painted and assembled at the factory in your design — so its certification stays exactly as it was homologated.</p>
+  <div class="certline">FIA 8859-2015 <span>·</span> SNELL SA2020 <span>·</span> <em data-i="badge3" style="font-style:normal">FACTORY CUSTOM PAINT</em></div>
+  <a class="cta" href="#preorder" data-i="cta1">RESERVE — $50 REFUNDABLE</a>
+  <p class="note" data-i="note1">First US batch, limited. Fully refundable until your design is approved.</p>
+</div>
+
+<section style="padding-top:10px;border-top:none">
+  <div class="wrap">
+    <div class="gallery">
+      <img class="g-main" src="https://img1.wsimg.com/isteam/ip/bed92d56-83ed-4fa5-b41f-0a37768d536a/GR3_F1%20%E9%80%8F%E6%98%8E%E5%BA%95.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,h:600,cg:true" alt="RACEMAX GR3 helmet — front three-quarter view">
+      <img class="g-side" src="https://img1.wsimg.com/isteam/ip/bed92d56-83ed-4fa5-b41f-0a37768d536a/GR3_F2%20%E9%80%8F%E6%98%8E%E5%BA%95.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,h:600,cg:true" alt="RACEMAX GR3 helmet — rear view, HANS anchors">
+      <img class="g-side" src="https://img1.wsimg.com/isteam/ip/bed92d56-83ed-4fa5-b41f-0a37768d536a/GR3_F4%20%E9%80%8F%E6%98%8E%E5%BA%95.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,h:600,cg:true" alt="RACEMAX GR3 helmet — with box, helmet bag and accessories">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label" data-i="cert_label">Certification</div>
+    <h2 data-i="cert_h">Certified. <strong>Verifiable.</strong></h2>
+    <p class="lead" data-i="cert_lead">Both certifications are listed in the official public registries. Check them yourself before you pay a cent.</p>
+    <div class="cols">
+      <div class="cert">
+        <div class="std">FIA <b>8859-2015</b></div>
+        <h3 data-i="cert1_h">FIA PREMIUM HELMET HOMOLOGATION</h3>
+        <p data-i="cert1_p">Homologation No. PH.128.25-C, granted to Shenzhen Racemax Technology Co., Ltd. for the GR3. No expiry date; recognised by karting and circuit series worldwide.</p>
+        <p class="verify"><a href="https://www.fia.com" target="_blank" rel="noopener" data-i="verify">VERIFY AT FIA.COM</a></p>
+      </div>
+      <div class="cert">
+        <div class="std">Snell <b>SA2020</b></div>
+        <h3 data-i="cert2_h">ON THE SNELL CERTIFIED LIST</h3>
+        <p data-i="cert2_p">The GR3 (XS–XXL, full face) appears on the Snell Memorial Foundation's official certified list under SA2020 — the standard US series ask for at tech inspection. Real carbon shell, anti-fog FIA-certified visor, removable washable liner.</p>
+        <p class="verify"><a href="https://smf.org/cert" target="_blank" rel="noopener" data-i="verify2">VERIFY AT SMF.ORG</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label" data-i="gal_label">Custom Work</div>
+    <h2 data-i="gal_h">Finished at the factory. <strong>Worn on track.</strong></h2>
+    <p class="lead" data-i="gal_lead">Real GR3 customs from the factory painting shop — every one painted and assembled under the same certification as the stock helmet.</p>
+    <div class="wall">
+      <img src="https://img1.wsimg.com/isteam/ip/bed92d56-83ed-4fa5-b41f-0a37768d536a/%E5%96%B7%E7%BB%981_1000.png" alt="Custom GR3 — red and gold baroque design, front view">
+      <img src="https://img1.wsimg.com/isteam/ip/bed92d56-83ed-4fa5-b41f-0a37768d536a/%E5%96%B7%E7%BB%982_1000.png" alt="Custom GR3 — red and gold baroque design, rear view">
+      <img src="https://img1.wsimg.com/isteam/ip/bed92d56-83ed-4fa5-b41f-0a37768d536a/PAINT1.jpg" alt="Custom GR3 — white and red pinstripe design, worn on track">
+      <img src="https://img1.wsimg.com/isteam/ip/bed92d56-83ed-4fa5-b41f-0a37768d536a/PAINT2.jpg" alt="Custom GR3 — white and red pinstripe design, rear view on track">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label" data-i="how_label">The Program</div>
+    <h2 data-i="how_h">How custom <strong>works</strong></h2>
+    <p class="lead" data-i="how_lead">Local painters charge $500–$1,500 and take weeks. We move the painting into the factory — a fraction of the cost, certification untouched.</p>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3 data-i="s1_h">Pick your base</h3><p data-i="s1_p">A stock GR3, or the paint-ready semi-finished version made for custom artwork.</p></div>
+      <div class="step"><div class="n">02</div><h3 data-i="s2_h">Send your design</h3><p data-i="s2_p">Reference photos, colors, name, number, flag. We confirm a design proof with you before paint touches the shell.</p></div>
+      <div class="step"><div class="n">03</div><h3 data-i="s3_h">Factory paints &amp; assembles</h3><p data-i="s3_p">Painted and finally assembled at the factory, so the helmet ships as one certified, complete product.</p></div>
+      <div class="step"><div class="n">04</div><h3 data-i="s4_h">Delivered to you</h3><p data-i="s4_p">Inspected, photographed for your approval before dispatch, and shipped to your door in the US. Typically 4–6 weeks from design approval.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label" data-i="size_label">Sizing</div>
+    <h2 data-i="size_h">Find your <strong>size</strong></h2>
+    <p class="lead" data-i="size_lead">Two shells, six sizes. Measure around your head, just above the eyebrows.</p>
+    <div class="uom" role="group" aria-label="Unit of measure">
+      <button id="uom-cm" class="active">CM</button>
+      <button id="uom-in">INCH</button>
+    </div>
+    <table>
+      <tr><th data-i="th_size">Size</th><th data-i="th_cm">Head circumference</th><th data-i="th_shell">Shell</th></tr>
+      <tr><td class="s">XS</td><td class="mv" data-cm="53 – 54 cm" data-in="20.9 – 21.3 in">53 – 54 cm</td><td data-i="shell_s">Small</td></tr>
+      <tr><td class="s">S</td><td class="mv" data-cm="55 – 56 cm" data-in="21.7 – 22.0 in">55 – 56 cm</td><td data-i="shell_s2">Small</td></tr>
+      <tr><td class="s">M</td><td class="mv" data-cm="57 – 58 cm" data-in="22.4 – 22.8 in">57 – 58 cm</td><td data-i="shell_s3">Small</td></tr>
+      <tr><td class="s">L</td><td class="mv" data-cm="59 – 60 cm" data-in="23.2 – 23.6 in">59 – 60 cm</td><td data-i="shell_l">Large</td></tr>
+      <tr><td class="s">XL</td><td class="mv" data-cm="61 – 62 cm" data-in="24.0 – 24.4 in">61 – 62 cm</td><td data-i="shell_l2">Large</td></tr>
+      <tr><td class="s">XXL</td><td class="mv" data-cm="63 – 64 cm" data-in="24.8 – 25.2 in">63 – 64 cm</td><td data-i="shell_l3">Large</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label" data-i="price_label">Pricing</div>
+    <h2 data-i="price_h">US launch <strong>pricing</strong></h2>
+    <div class="prices">
+      <div class="price">
+        <h3 data-i="p1_h">GR3 — Stock</h3>
+        <div class="amount">$599</div>
+        <p data-i="p1_p">Factory finish, clear anti-fog visor included. Ready to race out of the box.</p>
+        <select id="size-stock" aria-label="Size"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option><option>XXL</option></select>
+        <br><button class="addbtn" data-add="stock" data-i="add_cart">ADD TO CART</button>
+      </div>
+      <div class="price">
+        <h3 data-i="p2_h">GR3 — Custom</h3>
+        <div class="amount" data-i="p2_amt">from $849</div>
+        <p data-i="p2_p">Your design, factory-painted and assembled. Design proof, one revision, US delivery included.</p>
+        <select id="size-custom" aria-label="Size"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option><option>XXL</option></select>
+        <br><button class="addbtn" data-add="custom" data-i="add_cart2">ADD TO CART</button>
+      </div>
+      <div class="price">
+        <h3 data-i="p3_h">Reserve</h3>
+        <div class="amount">$50</div>
+        <p data-i="p3_p">Fully refundable deposit. Locks your batch slot and launch pricing.</p>
+        <br><button class="addbtn" data-add="deposit" data-i="add_cart3">ADD TO CART</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preorder">
+  <div class="wrap">
+    <div class="label" data-i="form_label">Pre-Order</div>
+    <h2 data-i="form_h">Join the first <strong>US batch</strong></h2>
+    <p class="lead" data-i="form_lead">Tell us what you want. We reply within 2 business days with availability, a design consultation, and a secure deposit link.</p>
+    <div id="cart-box">
+      <h3 data-i="cart_h">YOUR CART</h3>
+      <div id="cart-items"><p id="cart-empty" data-i="cart_empty">Your cart is empty — add a helmet above, or just send the form below as an inquiry.</p></div>
+      <div class="ctotal" id="cart-total-row" style="display:none"><span data-i="cart_total">Total</span><span id="cart-total">$0</span></div>
+      <p class="cart-note" data-i="cart_note">No payment is taken now. Submitting sends us your order request — we confirm size and design with you 1-on-1, then email you a secure PayPal link for the $50 refundable deposit.</p>
+    </div>
+    <form id="po-form">
+      <div class="frow">
+        <div><label data-i="f_name">Full name</label><input required name="name" type="text"></div>
+        <div><label data-i="f_email">Email</label><input required name="email" type="email"></div>
+        <div><label data-i="f_lang">Preferred language</label>
+          <select name="lang"><option>English</option><option>Español</option><option>中文</option></select></div>
+      </div>
+      <div class="frow">
+        <div><label data-i="f_size">Helmet size</label>
+          <select name="size"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option><option>XXL</option><option data-i="f_size_unsure">Not sure — help me measure</option></select></div>
+        <div><label data-i="f_type">I'm interested in</label>
+          <select name="type">
+            <option data-i="f_t1">Custom paint program (from $849)</option>
+            <option data-i="f_t2">Stock GR3 ($599)</option>
+            <option data-i="f_t3">Paint-ready base for my own painter</option>
+            <option data-i="f_t4">Team / group order (3+ helmets)</option>
+          </select></div>
+        <div><label data-i="f_design">Design idea (optional)</label><input name="design" type="text"></div>
+      </div>
+      <button class="submit" type="submit" data-i="f_submit">REQUEST MY SLOT</button>
+      <div class="ok" id="ok" data-i="f_ok">Thank you — your request is in. We'll email you within 2 business days with next steps and your deposit link.</div>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="label" data-i="faq_label">FAQ</div>
+    <h2 data-i="faq_h">Questions</h2>
+    <details><summary data-i="q1">Is the GR3 legal for US karting?</summary><p data-i="a1">The GR3 carries Snell SA2020 certification and FIA 8859-2015 homologation — the two standards US karting and auto racing series most commonly accept at tech inspection. Series rulebooks vary, so check yours; both listings are public (fia.com / smf.org) for your tech inspector to verify.</p></details>
+    <details><summary data-i="q2">Why does factory assembly matter for a custom helmet?</summary><p data-i="a2">A helmet is certified as a complete product. If a third party disassembles and repaints it, the certification chain breaks. In our program the factory paints the shell and completes final assembly, so your custom helmet arrives as the same certified product that was homologated.</p></details>
+    <details><summary data-i="q3">How long does a custom helmet take?</summary><p data-i="a3">Typically 4–6 weeks from design approval to US delivery. Before dispatch, we send you photos of your finished helmet for approval. Stock helmets ship much faster when US stock is available.</p></details>
+    <details><summary data-i="q4">Can I exchange it if the fit is wrong?</summary><p data-i="a4">Stock helmets can be exchanged for size within 30 days if unworn on track. Custom-painted helmets are made to your design and can't be resold, so we confirm your size carefully with you before painting begins.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p data-i="foot1">RACEMAX GR3 US Custom Helmet Program — operated in the United States by the brand's US team. RACEMAX® and GR3 are trademarks of Shenzhen Racemax Technology Co., Ltd.</p>
+    <p data-i="foot2">Always confirm your series' helmet rulebook before racing. Wear a certified helmet, properly fitted and fastened, every time you go out.</p>
+  </div>
+</footer>
+
+<script>
+const T = {
+es: {
+  kicker:"Programa de cascos personalizados — EE. UU.",
+  h1:"Un casco. <strong>Tu diseño.</strong><br>Doble certificación.",
+  sub:"El GR3 es un casco integral de competición, pintado y ensamblado en fábrica con tu diseño — para que su certificación quede exactamente como fue homologada.",
+  badge3:"PINTURA PERSONALIZADA EN FÁBRICA",
+  cta1:"RESERVA — $50 REEMBOLSABLE",
+  note1:"Primer lote para EE. UU., limitado. Totalmente reembolsable hasta que apruebes tu diseño.",
+  cert_label:"Certificación", cert_h:"Certificado. <strong>Verificable.</strong>",
+  cert_lead:"Ambas certificaciones están en los registros públicos oficiales. Compruébalas tú mismo antes de pagar un centavo.",
+  cert1_h:"HOMOLOGACIÓN FIA DE CASCO PREMIUM",
+  cert1_p:"Homologación n.º PH.128.25-C, otorgada a Shenzhen Racemax Technology Co., Ltd. para el GR3. Sin fecha de vencimiento; reconocida por series de karting y circuito en todo el mundo.",
+  verify:"VERIFICAR EN FIA.COM",
+  cert2_h:"EN LA LISTA OFICIAL DE SNELL",
+  cert2_p:"El GR3 (XS–XXL, integral) aparece en la lista oficial de cascos certificados de la Snell Memorial Foundation bajo la norma SA2020 — la que las series de EE. UU. piden en la inspección técnica. Carcasa de carbono real, visera antivaho con certificación FIA, interior desmontable y lavable.",
+  verify2:"VERIFICAR EN SMF.ORG",
+  gal_label:"Trabajos personalizados", gal_h:"Terminados en fábrica. <strong>Puestos en pista.</strong>",
+  gal_lead:"Cascos GR3 personalizados reales, del taller de pintura de la fábrica — cada uno pintado y ensamblado bajo la misma certificación que el casco de serie.",
+  how_label:"El programa", how_h:"Cómo funciona la <strong>personalización</strong>",
+  how_lead:"Los pintores locales cobran $500–$1,500 y tardan semanas. Nosotros trasladamos la pintura a la fábrica — por una fracción del costo, sin tocar la certificación.",
+  s1_h:"Elige tu base", s1_p:"Un GR3 de serie, o la versión semiacabada lista para pintar, hecha para diseños personalizados.",
+  s2_h:"Envía tu diseño", s2_p:"Fotos de referencia, colores, nombre, número, bandera. Confirmamos una prueba de diseño contigo antes de pintar la carcasa.",
+  s3_h:"La fábrica pinta y ensambla", s3_p:"Pintado y ensamblado finalmente en fábrica, así el casco llega como un producto certificado y completo.",
+  s4_h:"Entrega en tu puerta", s4_p:"Inspeccionado, fotografiado para tu aprobación antes del envío, y entregado en tu dirección en EE. UU. Normalmente 4–6 semanas desde la aprobación del diseño.",
+  size_label:"Tallas", size_h:"Encuentra tu <strong>talla</strong>",
+  size_lead:"Dos carcasas, seis tallas. Mide el contorno de tu cabeza, justo sobre las cejas.",
+  th_size:"Talla", th_cm:"Contorno de cabeza", th_shell:"Carcasa",
+  shell_s:"Pequeña", shell_s2:"Pequeña", shell_s3:"Pequeña", shell_l:"Grande", shell_l2:"Grande", shell_l3:"Grande",
+  price_label:"Precios", price_h:"Precios de <strong>lanzamiento</strong> en EE. UU.",
+  p1_h:"GR3 — De serie", p1_p:"Acabado de fábrica, visera transparente antivaho incluida. Listo para correr.",
+  p2_h:"GR3 — Personalizado", p2_amt:"desde $849", p2_p:"Tu diseño, pintado y ensamblado en fábrica. Prueba de diseño, una revisión y envío en EE. UU. incluidos.",
+  p3_h:"Reserva", p3_p:"Depósito totalmente reembolsable. Asegura tu lugar en el lote y tu precio de lanzamiento.",
+  form_label:"Pre-venta", form_h:"Únete al primer <strong>lote de EE. UU.</strong>",
+  form_lead:"Cuéntanos qué buscas. Respondemos en 2 días laborables con disponibilidad, una consulta de diseño y un enlace seguro de depósito.",
+  f_name:"Nombre completo", f_email:"Correo electrónico", f_lang:"Idioma preferido", f_size:"Talla de casco", f_size_unsure:"No estoy seguro — ayúdame a medir",
+  f_type:"Me interesa", f_t1:"Programa de pintura personalizada (desde $849)", f_t2:"GR3 de serie ($599)", f_t3:"Base lista para pintar para mi propio pintor", f_t4:"Pedido de equipo / grupo (3+ cascos)",
+  f_design:"Idea de diseño (opcional)", f_submit:"SOLICITAR MI LUGAR",
+  f_ok:"Gracias — tu solicitud fue recibida. Te escribiremos en 2 días laborables con los próximos pasos y tu enlace de depósito.",
+  add_cart:"AÑADIR AL CARRITO", add_cart2:"AÑADIR AL CARRITO", add_cart3:"AÑADIR AL CARRITO",
+  cart_h:"TU CARRITO", cart_empty:"Tu carrito está vacío — añade un casco arriba, o envía el formulario de abajo como consulta.",
+  cart_total:"Total", cart_note:"Ahora no se cobra nada. Al enviar, recibimos tu solicitud — confirmamos talla y diseño contigo en persona, y luego te enviamos un enlace seguro de PayPal para el depósito reembolsable de $50.",
+  faq_label:"Preguntas", faq_h:"Preguntas frecuentes",
+  q1:"¿El GR3 es legal para el karting en EE. UU.?",
+  a1:"El GR3 cuenta con certificación Snell SA2020 y homologación FIA 8859-2015 — las dos normas que las series de karting y automovilismo de EE. UU. aceptan con más frecuencia en la inspección técnica. Los reglamentos varían, así que revisa el tuyo; ambas certificaciones son públicas (fia.com / smf.org) para que tu inspector las verifique.",
+  q2:"¿Por qué importa el ensamblaje en fábrica?",
+  a2:"Un casco se certifica como producto completo. Si un tercero lo desarma y lo repinta, la cadena de certificación se rompe. En nuestro programa, la fábrica pinta la carcasa y completa el ensamblaje final, así tu casco personalizado llega siendo el mismo producto certificado que fue homologado.",
+  q3:"¿Cuánto tarda un casco personalizado?",
+  a3:"Normalmente 4–6 semanas desde la aprobación del diseño hasta la entrega en EE. UU. Antes del envío, te mandamos fotos de tu casco terminado para tu aprobación. Los cascos de serie se envían mucho más rápido cuando hay stock en EE. UU.",
+  q4:"¿Puedo cambiarlo si la talla no me queda?",
+  a4:"Los cascos de serie se pueden cambiar de talla dentro de 30 días si no se usaron en pista. Los de pintura personalizada se hacen a tu diseño y no se pueden revender, por eso confirmamos tu talla con cuidado antes de pintar.",
+  foot1:"Programa de cascos personalizados RACEMAX GR3 en EE. UU. — operado en Estados Unidos por el equipo local de la marca. RACEMAX® y GR3 son marcas de Shenzhen Racemax Technology Co., Ltd.",
+  foot2:"Confirma siempre el reglamento de cascos de tu serie antes de competir. Usa un casco certificado, bien ajustado y abrochado, cada vez que salgas a pista."
+},
+zh: {
+  kicker:"美国定制头盔计划",
+  h1:"一顶头盔<br><strong>你的设计</strong><br>双认证",
+  sub:"GR3 是一款全盔竞赛头盔，按你的设计在工厂完成涂装与总装，认证状态与送检时完全一致。",
+  badge3:"工厂定制涂装",
+  cta1:"预订 — $50 意向金，可退",
+  note1:"美国首批，数量有限。设计确认之前，意向金全额可退。",
+  cert_label:"认证", cert_h:"有认证。<strong>可查证。</strong>",
+  cert_lead:"两项认证都登记在官方公开名单里。付款之前，你自己先查。",
+  cert1_h:"FIA 高级头盔认证",
+  cert1_p:"认证编号 PH.128.25-C，由 FIA 授予 Shenzhen Racemax Technology Co., Ltd. 的 GR3。无到期日，全球卡丁车与场地赛事通用认可。",
+  verify:"在 FIA.COM 查证",
+  cert2_h:"登上 SNELL 官方认证名单",
+  cert2_p:"GR3（XS–XXL，全盔）收录于 Snell 纪念基金会官方认证名单，标准 SA2020——正是美国赛事验车时最常要求的那一项。真碳纤维盔壳、FIA 认证防雾面镜、可拆洗内衬。",
+  verify2:"在 SMF.ORG 查证",
+  gal_label:"定制作品", gal_h:"工厂出品。<strong>赛场实戴。</strong>",
+  gal_lead:"真实的 GR3 定制作品，出自工厂喷绘车间——每一顶的涂装和总装，都在与原厂款相同的认证之下完成。",
+  how_label:"定制流程", how_h:"定制<strong>怎么走</strong>",
+  how_lead:"美国本地画师收费 $500–$1,500，还要等几周。我们把涂装搬回工厂——成本只有零头，认证不受影响。",
+  s1_h:"选底盔", s1_p:"原厂款 GR3，或者专为定制涂装准备的待涂装半成品版。",
+  s2_h:"发设计", s2_p:"参考图、颜色、名字、号码、国旗都可以。动手涂装之前，先跟你确认设计稿。",
+  s3_h:"工厂涂装 + 总装", s3_p:"工厂完成涂装并做最终总装，头盔以完整的认证成品状态出厂。",
+  s4_h:"寄到你家", s4_p:"检验合格、发货前拍成品照给你确认，再寄到你在美国的地址。设计确认后通常 4–6 周。",
+  size_label:"尺码", size_h:"选对<strong>尺码</strong>",
+  size_lead:"两个盔壳，六个尺码。量眉毛上方一圈的头围，对照下表。",
+  th_size:"尺码", th_cm:"头围", th_shell:"盔壳",
+  shell_s:"小盔壳", shell_s2:"小盔壳", shell_s3:"小盔壳", shell_l:"大盔壳", shell_l2:"大盔壳", shell_l3:"大盔壳",
+  price_label:"价格", price_h:"美国<strong>上市价</strong>",
+  p1_h:"GR3 — 原厂款", p1_p:"原厂涂装，标配透明防雾面镜，开箱即可下场。",
+  p2_h:"GR3 — 定制款", p2_amt:"$849 起", p2_p:"你的设计，工厂涂装、工厂总装。含设计稿、一轮修改、美国境内配送。",
+  p3_h:"预订", p3_p:"意向金全额可退。锁定首批名额与上市价。",
+  form_label:"预订", form_h:"加入<strong>美国首批</strong>",
+  form_lead:"告诉我们你想要什么。2 个工作日内回复：库存、设计咨询时间、安全的意向金支付链接。",
+  f_name:"姓名", f_email:"邮箱", f_lang:"首选语言", f_size:"头盔尺码", f_size_unsure:"不确定 — 帮我量",
+  f_type:"我感兴趣的是", f_t1:"定制涂装计划（$849 起）", f_t2:"原厂款 GR3（$599）", f_t3:"待涂装底盔，给我自己的画师", f_t4:"车队 / 团体订单（3 顶以上）",
+  f_design:"设计想法（可选）", f_submit:"提交预订",
+  f_ok:"谢谢——预订已收到。我们会在 2 个工作日内邮件回复后续步骤和意向金链接。",
+  add_cart:"加入购物车", add_cart2:"加入购物车", add_cart3:"加入购物车",
+  cart_h:"你的购物车", cart_empty:"购物车是空的——在上面把头盔加入购物车，或者直接提交下面的表单当作咨询。",
+  cart_total:"合计", cart_note:"提交时不收取任何费用。提交后我们会收到你的订单请求，先一对一跟你确认尺码和设计，再把 $50 可退意向金的安全 PayPal 链接发给你。",
+  faq_label:"问答", faq_h:"常见问题",
+  q1:"GR3 在美国卡丁车比赛里合法吗？",
+  a1:"GR3 持有 Snell SA2020 认证和 FIA 8859-2015 认证——这正是美国卡丁车与汽车赛事验车时最常接受的两项标准。各系列规则书略有不同，请以你的系列为准；两项认证均为公开名单（fia.com / smf.org），验车官可自行查证。",
+  q2:"定制头盔为什么强调工厂总装？",
+  a2:"头盔按“完整成品”认证。第三方拆开重喷，认证链就断了。我们的流程是工厂涂装、工厂完成最终总装，你收到的定制盔与送检认证的是同一个完整产品。",
+  q3:"定制一顶要多久？",
+  a3:"从设计确认到美国收货通常 4–6 周。发货前，我们会把成品照片发给你确认。原厂款如有美国现货，发货快得多。",
+  q4:"尺码不对能换吗？",
+  a4:"原厂款在未下场使用的情况下，30 天内可换码。定制款按你的设计制作、无法二次销售，所以涂装开始前我们会跟你仔细确认尺码。",
+  foot1:"RACEMAX GR3 美国定制头盔计划 — 由品牌美国团队在美国运营。RACEMAX® 与 GR3 为 Shenzhen Racemax Technology Co., Ltd. 的商标。",
+  foot2:"参赛前请务必确认你所在系列的头盔规则。每次下场，都请佩戴认证合格、贴合且系紧的头盔。"
+}};
+function setLang(l){
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    const k=el.getAttribute('data-i');
+    if(el.dataset.en===undefined) el.dataset.en=el.innerHTML;
+    if(l==='en'){ el.innerHTML=el.dataset.en; }
+    else if(T[l] && T[l][k]){ el.innerHTML=T[l][k]; }
+  });
+  document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('active', b.dataset.lang===l));
+  document.documentElement.lang = l==='zh' ? 'zh' : l;
+}
+document.querySelectorAll('.langs button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+function setUom(u){
+  document.querySelectorAll('.mv').forEach(td=>{ td.textContent = u==='cm' ? td.dataset.cm : td.dataset.in; });
+  document.getElementById('uom-cm').classList.toggle('active', u==='cm');
+  document.getElementById('uom-in').classList.toggle('active', u==='in');
+}
+document.getElementById('uom-cm').addEventListener('click',()=>setUom('cm'));
+document.getElementById('uom-in').addEventListener('click',()=>setUom('in'));
+const PRODUCTS={
+  stock:{name:'GR3 — Stock',price:499},
+  custom:{name:'GR3 — Custom',price:699},
+  deposit:{name:'Reserve deposit (fully refundable)',price:50}
+};
+let cart=[];
+function renderCart(){
+  const box=document.getElementById('cart-items');
+  const totalRow=document.getElementById('cart-total-row');
+  if(cart.length===0){
+    box.innerHTML='<p id="cart-empty">Your cart is empty — add a helmet above, or just send the form below as an inquiry.</p>';
+    totalRow.style.display='none'; return;
+  }
+  box.innerHTML=cart.map((it,idx)=>'<div class="citem"><span>'+PRODUCTS[it.k].name+(it.size?' <span class="cx">· Size '+it.size+'</span>':'')+'</span><span>$'+PRODUCTS[it.k].price+' &nbsp;<button type="button" data-rm="'+idx+'">✕</button></span></div>').join('');
+  box.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{ cart.splice(+b.dataset.rm,1); renderCart(); }));
+  document.getElementById('cart-total').textContent='$'+cart.reduce((s,i)=>s+PRODUCTS[i.k].price,0);
+  totalRow.style.display='flex';
+}
+document.querySelectorAll('[data-add]').forEach(b=>b.addEventListener('click',()=>{
+  const k=b.dataset.add; let size='';
+  if(k==='stock') size=document.getElementById('size-stock').value;
+  if(k==='custom') size=document.getElementById('size-custom').value;
+  cart.push({k:k,size:size}); renderCart();
+  document.getElementById('preorder').scrollIntoView({behavior:'smooth'});
+}));
+document.getElementById('po-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  const form=e.target, fd=new FormData(form);
+  const lines=cart.map(i=>PRODUCTS[i.k].name+(i.size?' — Size '+i.size:'')+' — $'+PRODUCTS[i.k].price);
+  const total=cart.reduce((s,i)=>s+PRODUCTS[i.k].price,0);
+  const payload={
+    _subject:'GR3 order request — '+(fd.get('name')||''),
+    _template:'table', _captcha:'false',
+    name:fd.get('name'), email:fd.get('email'), language:fd.get('lang'),
+    form_size:fd.get('size'), interest:fd.get('type'), design_idea:fd.get('design')||'',
+    cart:lines.length?lines.join(' | '):'(inquiry only, cart empty)',
+    cart_total:'$'+total
+  };
+  fetch('https://formsubmit.co/ajax/hhhtms@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+  .then(r=>{ if(!r.ok) throw new Error('send failed'); document.getElementById('ok').style.display='block'; })
+  .catch(()=>{ const ok=document.getElementById('ok'); ok.style.display='block'; ok.style.color='#8a2b20'; ok.style.borderLeftColor='#8a2b20'; ok.textContent='We could not send automatically — please email us directly at hhhtms@gmail.com with your size and what you would like. Sorry for the extra step.'; });
+});
+</script>
+</body>
+</html>
