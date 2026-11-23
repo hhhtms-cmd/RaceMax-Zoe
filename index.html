@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- GR3-US BUILD v1 2026-11-23 -->
+<!-- GR3-US BUILD v2 2026-11-23 -->
 <title>RACEMAX GR3 — Custom Karting Helmet | US Pre-Order</title>
 <style>
   :root{--ink:#0b0b0c;--paper:#faf9f7;--muted:#8a8a86;--line:#e4e2dc;--accent:#b3001b}
@@ -440,8 +440,8 @@ function setUom(u){
 document.getElementById('uom-cm').addEventListener('click',()=>setUom('cm'));
 document.getElementById('uom-in').addEventListener('click',()=>setUom('in'));
 const PRODUCTS={
-  stock:{name:'GR3 — Stock',price:499},
-  custom:{name:'GR3 — Custom',price:699},
+  stock:{name:'GR3 — Stock',price:599},
+  custom:{name:'GR3 — Custom',price:849},
   deposit:{name:'Reserve deposit (fully refundable)',price:50}
 };
 let cart=[];
@@ -467,6 +467,8 @@ document.querySelectorAll('[data-add]').forEach(b=>b.addEventListener('click',()
 document.getElementById('po-form').addEventListener('submit',function(e){
   e.preventDefault();
   const form=e.target, fd=new FormData(form);
+  const ok=document.getElementById('ok');
+  const btn=form.querySelector('.submit');
   const lines=cart.map(i=>PRODUCTS[i.k].name+(i.size?' — Size '+i.size:'')+' — $'+PRODUCTS[i.k].price);
   const total=cart.reduce((s,i)=>s+PRODUCTS[i.k].price,0);
   const payload={
@@ -477,9 +479,18 @@ document.getElementById('po-form').addEventListener('submit',function(e){
     cart:lines.length?lines.join(' | '):'(inquiry only, cart empty)',
     cart_total:'$'+total
   };
-  fetch('https://formsubmit.co/ajax/hhhtms@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
-  .then(r=>{ if(!r.ok) throw new Error('send failed'); document.getElementById('ok').style.display='block'; })
-  .catch(()=>{ const ok=document.getElementById('ok'); ok.style.display='block'; ok.style.color='#8a2b20'; ok.style.borderLeftColor='#8a2b20'; ok.textContent='We could not send automatically — please email us directly at hhhtms@gmail.com with your size and what you would like. Sorry for the extra step.'; });
+  btn.disabled=true; btn.textContent='SENDING…';
+  ok.style.display='block'; ok.style.color=''; ok.style.borderLeftColor='';
+  ok.textContent='Sending your request…';
+  const ctl=new AbortController(); const timer=setTimeout(()=>ctl.abort(),12000);
+  fetch('https://formsubmit.co/ajax/hhhtms@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload),signal:ctl.signal})
+  .then(r=>{ clearTimeout(timer); if(!r.ok) throw new Error('send failed');
+    ok.textContent='Thank you — your request is in. We\'ll email you within 2 business days with next steps and your deposit link.';
+    btn.textContent='REQUEST SENT ✓'; ok.scrollIntoView({behavior:'smooth',block:'center'}); })
+  .catch(()=>{ clearTimeout(timer);
+    ok.style.color='#8a2b20'; ok.style.borderLeftColor='#8a2b20';
+    ok.textContent='We could not send automatically — please email us directly at hhhtms@gmail.com with your size and what you would like. Sorry for the extra step.';
+    btn.disabled=false; btn.textContent='REQUEST MY SLOT'; ok.scrollIntoView({behavior:'smooth',block:'center'}); });
 });
 </script>
 </body>
