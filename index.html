@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- GR3-US BUILD v3 2026-11-23 -->
+<!-- GR3-US BUILD v4 2026-11-23 -->
 <title>RACEMAX GR3 — Custom Karting Helmet | US Pre-Order</title>
 <style>
   :root{--ink:#0b0b0c;--paper:#faf9f7;--muted:#8a8a86;--line:#e4e2dc;--accent:#b3001b}
@@ -472,8 +472,9 @@ document.getElementById('po-form').addEventListener('submit',function(e){
   const lines=cart.map(i=>PRODUCTS[i.k].name+(i.size?' — Size '+i.size:'')+' — $'+PRODUCTS[i.k].price);
   const total=cart.reduce((s,i)=>s+PRODUCTS[i.k].price,0);
   const payload={
-    _subject:'GR3 order request — '+(fd.get('name')||''),
-    _template:'table', _captcha:'false',
+    access_key:'7407b208-f393-4e2b-b115-0e8c52f2766e',
+    subject:'GR3 order request — '+(fd.get('name')||''),
+    from_name:'GR3 US Orders',
     name:fd.get('name'), email:fd.get('email'), language:fd.get('lang'),
     form_size:fd.get('size'), interest:fd.get('type'), design_idea:fd.get('design')||'',
     cart:lines.length?lines.join(' | '):'(inquiry only, cart empty)',
@@ -483,8 +484,8 @@ document.getElementById('po-form').addEventListener('submit',function(e){
   ok.style.display='block'; ok.style.color=''; ok.style.borderLeftColor='';
   ok.textContent='Sending your request…';
   const ctl=new AbortController(); const timer=setTimeout(()=>ctl.abort(),12000);
-  fetch('https://formsubmit.co/ajax/79c70790b4a4b79a38cc8f2c721d1b8f',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload),signal:ctl.signal})
-  .then(r=>{ clearTimeout(timer); if(!r.ok) throw new Error('send failed');
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload),signal:ctl.signal})
+  .then(r=>r.json()).then(d=>{ clearTimeout(timer); if(!d.success) throw new Error('send failed');
     ok.textContent='Thank you — your request is in. We\'ll email you within 2 business days with next steps and your deposit link.';
     btn.textContent='REQUEST SENT ✓'; ok.scrollIntoView({behavior:'smooth',block:'center'}); })
   .catch(()=>{ clearTimeout(timer);
